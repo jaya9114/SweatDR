@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:dr_app/core/app_export.dart';
 import 'package:dr_app/presentation/profile_health_monitoring_page/profile_health_monitoring_page.dart';
 import 'package:dr_app/presentation/profile_page/profile_page.dart';

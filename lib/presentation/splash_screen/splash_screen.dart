@@ -11,6 +11,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        
         extendBody: true,
         extendBodyBehindAppBar: true,
         body: Container(

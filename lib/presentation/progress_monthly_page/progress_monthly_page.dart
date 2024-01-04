@@ -1,3 +1,5 @@
+// ignore_for_file: must_call_super
+
 import '../progress_monthly_page/widgets/calorietrackerlist1_item_widget.dart';
 import 'package:dr_app/core/app_export.dart';
 import 'package:flutter/material.dart';

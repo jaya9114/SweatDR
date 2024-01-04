@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:dr_app/core/app_export.dart';
 import 'package:dr_app/widgets/app_bar/appbar_leading_image.dart';
 import 'package:dr_app/widgets/app_bar/custom_app_bar.dart';
