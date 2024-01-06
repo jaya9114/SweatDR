@@ -1,4 +1,5 @@
 import 'package:dr_app/core/app_export.dart';
+import 'package:dr_app/presentation/onboarding_three_one_screen/onboarding_three_one_screen.dart';
 import 'package:dr_app/widgets/custom_checkbox_button.dart';
 import 'package:dr_app/widgets/custom_elevated_button.dart';
 import 'package:dr_app/widgets/custom_icon_button.dart';
@@ -50,6 +51,13 @@ class LoginScreen extends StatelessWidget {
                 _buildRowWithRememberMeAndForgotPassword(context),
                 SizedBox(height: 21.v),
                 CustomElevatedButton(
+                   onPressed: () {
+            // Add functionality for the button
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => OnboardingThreeOneScreen()),
+            );
+          },
                   text: "Login",
                   margin: EdgeInsets.symmetric(horizontal: 20.h),
                 ),

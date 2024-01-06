@@ -2,6 +2,7 @@ import 'package:dr_app/core/app_export.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:dr_app/presentation/sign_up_screen/sign_up_screen.dart';
 
 class WelcomeFourScreen extends StatelessWidget {
   WelcomeFourScreen({Key? key})
@@ -30,41 +31,7 @@ class WelcomeFourScreen extends StatelessWidget {
 
                     // ============================================start first page======================================
 
-                    Container(
-                      padding: EdgeInsets.symmetric(horizontal: 20.h),
-                      child: Column(
-                        children: [
-                          CustomImageView(
-                            imagePath: ImageConstant.imgIllusrtarion2,
-                            height: 291.v,
-                            width: 326.h,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(
-                              top: 43.v,
-                              right: 12.h,
-                            ),
-                            child: Text(
-                              "Track Your Progress",
-                              style: theme.textTheme.displaySmall,
-                            ),
-                          ),
-                          Container(
-                            width: 322.h,
-                            margin: EdgeInsets.only(right: 12.h),
-                            child: Text(
-                              "Record your exercise, meal intake, weight, creatine, and glucose data.Track your progress and optimize your health.",
-                              maxLines: 3,
-                              overflow: TextOverflow.ellipsis,
-                              style: CustomTextStyles.titleMediumBluegray400
-                                  .copyWith(
-                                height: 1.63,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                   
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 20.h),
                       child: Column(
@@ -363,11 +330,7 @@ class WelcomeFourScreen extends StatelessWidget {
                                   ),
                                 ),
                                 
-                                 // ====================== End First page========================================
-
-
-                            // ===========================================start second page======================================
-                        
+                                 
                                 CustomImageView(
                                   imagePath: ImageConstant.character_2,
                                   height: 213.v,
@@ -408,6 +371,42 @@ class WelcomeFourScreen extends StatelessWidget {
                             margin: EdgeInsets.only(right: 6.h),
                             child: Text(
                               "SweatDR is a tool to help you monitor your health, exercise and adopt a healthier lifestyle.",
+                              maxLines: 3,
+                              overflow: TextOverflow.ellipsis,
+                              style: CustomTextStyles.titleMediumBluegray400
+                                  .copyWith(
+                                height: 1.63,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    
+                     Container(
+                      padding: EdgeInsets.symmetric(horizontal: 20.h),
+                      child: Column(
+                        children: [
+                          CustomImageView(
+                            imagePath: ImageConstant.imgIllusrtarion2,
+                            height: 291.v,
+                            width: 326.h,
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 43.v,
+                              right: 12.h,
+                            ),
+                            child: Text(
+                              "Track Your Progress",
+                              style: theme.textTheme.displaySmall,
+                            ),
+                          ),
+                          Container(
+                            width: 322.h,
+                            margin: EdgeInsets.only(right: 12.h),
+                            child: Text(
+                              "Record your exercise, meal intake, weight, creatine, and glucose data.Track your progress and optimize your health.",
                               maxLines: 3,
                               overflow: TextOverflow.ellipsis,
                               style: CustomTextStyles.titleMediumBluegray400
@@ -736,6 +735,37 @@ class WelcomeFourScreen extends StatelessWidget {
                               ),
                             ),
                           ),
+                          SizedBox(height: 20), // Add some space between the text and the button
+                                          Align(
+                        alignment: Alignment.center,
+                        child: Container(
+                          margin: EdgeInsets.symmetric(horizontal: 0),
+                          child: ElevatedButton(
+                            onPressed: () {
+                              // Add functionality for the Get Started button
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => SignUpScreen()),
+                              );
+                            },
+                            style: ElevatedButton.styleFrom(
+                              primary: Color.fromARGB(255, 41, 119, 184), // Set the button color
+                              onPrimary: Colors.white, // Set the text color
+                              padding: EdgeInsets.symmetric(horizontal: 150, vertical: 30), // Set width and height
+                            ),
+                            child: Text(
+                              "Get Started",
+                              style: TextStyle(
+                                fontSize: 10, // Set the text size suitable for the button
+                              ),
+                            ),
+                          ),
+                        ),
+                                          )
+
+    
+
+
                         ],
                       ),
                     ),
@@ -770,37 +800,50 @@ class WelcomeFourScreen extends StatelessWidget {
  
   /// Section Widget
   Widget _buildRowOne(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(
-        left: 20.h,
-        right: 20.h,
-        bottom: 42.v,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
+  return Padding(
+    padding: EdgeInsets.only(
+      left: 20.h,
+      right: 20.h,
+      bottom: 42.v,
+    ),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        GestureDetector(
+          onTap: () {
+            // Navigate to the next page when "Skip" is clicked
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) =>SignUpScreen()), // Replace YourNextPage with the actual page you want to navigate to
+            );
+          },
+          child: Padding(
             padding: EdgeInsets.only(bottom: 2.v),
             child: Text(
               "Skip",
               style: CustomTextStyles.labelLargeDeeppurpleA100,
             ),
           ),
-          Spacer(),
-          Text(
-            "Next",
-            style: CustomTextStyles.titleSmallDeeppurple500,
-          ),
-          CustomImageView(
-            imagePath: ImageConstant.imgArrowRightDeepPurple500,
-            height: 18.adaptSize,
-            width: 18.adaptSize,
-            margin: EdgeInsets.only(left: 4.h),
-          ),
-        ],
-      ),
-    );
-  }
+        ),
+        Spacer(),
+    
+                      Text(
+                        "Next",
+                        style: CustomTextStyles.titleSmallDeeppurple500,
+                      ),
+                     
+          
+        CustomImageView(
+          imagePath: ImageConstant.imgArrowRightDeepPurple500,
+          height: 18.adaptSize,
+          width: 18.adaptSize,
+          margin: EdgeInsets.only(left: 4.h),
+        ),
+      ],
+    ),
+  );
+}
+
 
   /// Common widget
   Widget _buildStackOne(

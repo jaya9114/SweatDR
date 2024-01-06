@@ -1,4 +1,5 @@
 import 'package:dr_app/core/app_export.dart';
+import 'package:dr_app/presentation/login_screen/login_screen.dart';
 import 'package:dr_app/widgets/custom_checkbox_button.dart';
 import 'package:dr_app/widgets/custom_elevated_button.dart';
 import 'package:dr_app/widgets/custom_icon_button.dart';
@@ -49,6 +50,13 @@ class SignUpScreen extends StatelessWidget {
                 _buildAcceptTermsAndConditionsCheckBox(context),
                 SizedBox(height: 21.v),
                 CustomElevatedButton(
+                  onPressed: () {
+            // Add functionality for the button
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LoginScreen()),
+            );
+          },
                   text: "Create Account",
                   margin: EdgeInsets.symmetric(horizontal: 20.h),
                 ),
