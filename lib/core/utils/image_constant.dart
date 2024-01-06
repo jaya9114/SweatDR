@@ -3,7 +3,23 @@ class ImageConstant {
   static String imagePath = 'assets/images';
 
   // Welcome Four images
+  static String character_1 = 'assets/images/character-1.png';
+  static String speech_bubble = 'assets/images/speech-bubble.png';
   static String imgIllusrtarion2 = '$imagePath/img_illusrtarion2.svg';
+  static String character_2 = 'assets/images/character-2.png';
+  static String floor = 'assets/images/Floor.png';
+  static String Shadows = 'assets/images/Shadows.png';
+  static String Plants = 'assets/images/Plants.png';
+  static String chest = 'assets/images/chest.png';
+    static String top = 'assets/images/top.png';
+  static String Vector = 'assets/images/Vector.png';
+  static String Backpack = 'assets/images/Backpack.png';
+   static String Chest1 = 'assets/images/Chest1.png';
+  static String hand2 = 'assets/images/hand2.png';
+  static String fingers = 'assets/images/fingers.png';
+static String Shadows1 = 'assets/images/Shadows1.png';
+static String Plants1 = 'assets/images/Plants1.png';
+static String HomeIndicator = 'assets/images/HomeIndicator.png';
 
   static String imgFloor = '$imagePath/img_floor.svg';
 

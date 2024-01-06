@@ -27,6 +27,9 @@ class WelcomeFourScreen extends StatelessWidget {
                   controller: pageController,
                   scrollDirection: Axis.horizontal,
                   children: [
+
+                    // ============================================start first page======================================
+
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 20.h),
                       child: Column(
@@ -73,20 +76,20 @@ class WelcomeFourScreen extends StatelessWidget {
                               alignment: Alignment.bottomCenter,
                               children: [
                                 CustomImageView(
-                                  imagePath: ImageConstant.imgFloor,
+                                  imagePath: ImageConstant.floor,
                                   height: 154.v,
                                   width: 266.h,
                                   alignment: Alignment.bottomCenter,
                                 ),
                                 CustomImageView(
-                                  imagePath: ImageConstant.imgShadows,
+                                  imagePath: ImageConstant.Shadows1,
                                   height: 85.v,
                                   width: 278.h,
                                   alignment: Alignment.bottomCenter,
                                   margin: EdgeInsets.only(bottom: 7.v),
                                 ),
                                 CustomImageView(
-                                  imagePath: ImageConstant.imgPlants,
+                                  imagePath: ImageConstant.Plants1,
                                   height: 43.v,
                                   width: 271.h,
                                   alignment: Alignment.bottomCenter,
@@ -101,14 +104,14 @@ class WelcomeFourScreen extends StatelessWidget {
                                       alignment: Alignment.bottomCenter,
                                       children: [
                                         CustomImageView(
-                                          imagePath: ImageConstant.imgSettings,
+                                          imagePath: ImageConstant.Backpack,
                                           height: 60.v,
                                           width: 43.h,
                                           alignment: Alignment.topLeft,
                                           margin: EdgeInsets.only(top: 35.v),
                                         ),
                                         CustomImageView(
-                                          imagePath: ImageConstant.imgBottom,
+                                          imagePath: ImageConstant.Chest1,
                                           height: 144.v,
                                           width: 66.h,
                                           alignment: Alignment.bottomCenter,
@@ -136,7 +139,7 @@ class WelcomeFourScreen extends StatelessWidget {
                                                         CustomImageView(
                                                           imagePath:
                                                               ImageConstant
-                                                                  .imgThumbsUp,
+                                                                  .hand2,
                                                           height: 40.adaptSize,
                                                           width: 40.adaptSize,
                                                           alignment:
@@ -162,7 +165,7 @@ class WelcomeFourScreen extends StatelessWidget {
                                                 ),
                                                 CustomImageView(
                                                   imagePath:
-                                                      ImageConstant.imgUser,
+                                                      ImageConstant.Vector,
                                                   height: 16.adaptSize,
                                                   width: 16.adaptSize,
                                                   alignment: Alignment.topRight,
@@ -173,7 +176,7 @@ class WelcomeFourScreen extends StatelessWidget {
                                                 ),
                                                 CustomImageView(
                                                   imagePath: ImageConstant
-                                                      .imgUserGray600,
+                                                      .fingers,
                                                   height: 17.v,
                                                   width: 13.h,
                                                   alignment: Alignment.topRight,
@@ -318,7 +321,7 @@ class WelcomeFourScreen extends StatelessWidget {
                                                         CustomImageView(
                                                           imagePath:
                                                               ImageConstant
-                                                                  .imgPlay,
+                                                                  .chest,
                                                           height: 91.v,
                                                           width: 44.h,
                                                           alignment:
@@ -342,7 +345,7 @@ class WelcomeFourScreen extends StatelessWidget {
                                                 ),
                                                 CustomImageView(
                                                   imagePath: ImageConstant
-                                                      .imgSettingsGray600,
+                                                      .top,
                                                   height: 47.v,
                                                   width: 32.h,
                                                   alignment:
@@ -350,6 +353,7 @@ class WelcomeFourScreen extends StatelessWidget {
                                                   margin: EdgeInsets.only(
                                                       bottom: 3.v),
                                                 ),
+                                                
                                               ],
                                             ),
                                           ),
@@ -358,30 +362,38 @@ class WelcomeFourScreen extends StatelessWidget {
                                     ),
                                   ),
                                 ),
+                                
+                                 // ====================== End First page========================================
+
+
+                            // ===========================================start second page======================================
+                        
                                 CustomImageView(
-                                  imagePath: ImageConstant.imgCharacter,
+                                  imagePath: ImageConstant.character_2,
                                   height: 213.v,
                                   width: 99.h,
                                   alignment: Alignment.bottomCenter,
                                   margin: EdgeInsets.only(bottom: 14.v),
                                 ),
                                 CustomImageView(
-                                  imagePath: ImageConstant.imgCharacterGray600,
+                                  imagePath: ImageConstant.character_1,
                                   height: 223.v,
                                   width: 93.h,
                                   alignment: Alignment.topLeft,
                                 ),
                                 CustomImageView(
-                                  imagePath: ImageConstant.imgSpeechBubble,
-                                  height: 41.v,
-                                  width: 46.h,
+                                  imagePath: ImageConstant.speech_bubble,
+                                  height: 50.v,
+                                  width: 50.h,
                                   alignment: Alignment.topCenter,
                                   margin: EdgeInsets.only(top: 2.v),
                                 ),
                               ],
                             ),
                           ),
-                          Padding(
+
+
+                           Padding(
                             padding: EdgeInsets.only(
                               top: 41.v,
                               right: 6.h,
@@ -430,7 +442,7 @@ class WelcomeFourScreen extends StatelessWidget {
                                     decoration: BoxDecoration(
                                       image: DecorationImage(
                                         image: fs.Svg(
-                                          ImageConstant.imgGroup318,
+                                          ImageConstant.floor,
                                         ),
                                         fit: BoxFit.cover,
                                       ),
@@ -440,15 +452,15 @@ class WelcomeFourScreen extends StatelessWidget {
                                       children: [
                                         CustomImageView(
                                           imagePath: ImageConstant
-                                              .imgShadowsPrimarycontainer,
+                                              .Shadows,
                                           height: 103.v,
                                           width: 274.h,
                                           alignment: Alignment.bottomLeft,
                                         ),
                                         CustomImageView(
                                           imagePath: ImageConstant
-                                              .imgSettingsOnprimary,
-                                          height: 45.v,
+                                              .Plants,
+                                          height: 50.v,
                                           width: 24.h,
                                           alignment: Alignment.topRight,
                                           margin: EdgeInsets.only(
@@ -727,6 +739,8 @@ class WelcomeFourScreen extends StatelessWidget {
                         ],
                       ),
                     ),
+
+              
                   ],
                 ),
               ),
@@ -753,7 +767,7 @@ class WelcomeFourScreen extends StatelessWidget {
       ),
     );
   }
-
+ 
   /// Section Widget
   Widget _buildRowOne(BuildContext context) {
     return Padding(
@@ -815,6 +829,7 @@ class WelcomeFourScreen extends StatelessWidget {
               alignment: Alignment.center,
             ),
           ),
+           
         ],
       ),
     );
