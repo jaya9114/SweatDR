@@ -100,13 +100,13 @@ static String HomeIndicator = 'assets/images/HomeIndicator.png';
 
   static String imgUser35x20 = '$imagePath/img_user_35x20.svg';
 
-  static String imgBottleOfWater = '$imagePath/img_bottle_of_water.svg';
+  static String imgBottle = 'assets/images/Bottel.png';
 
   static String imgSettingsOnprimary26x77 =
       '$imagePath/img_settings_onprimary_26x77.svg';
 
   static String imgThumbsUpPurple300 =
-      '$imagePath/img_thumbs_up_purple_300.svg';
+      '$imagePath/apple.svg';
 
   static String imgSettingsOnprimary48x78 =
       '$imagePath/img_settings_onprimary_48x78.svg';

@@ -330,7 +330,6 @@ class WelcomeFourScreen extends StatelessWidget {
                                   ),
                                 ),
                                 
-                                 
                                 CustomImageView(
                                   imagePath: ImageConstant.character_2,
                                   height: 213.v,
@@ -340,7 +339,7 @@ class WelcomeFourScreen extends StatelessWidget {
                                 ),
                                 CustomImageView(
                                   imagePath: ImageConstant.character_1,
-                                  height: 223.v,
+                                  height: 230.v,
                                   width: 93.h,
                                   alignment: Alignment.topLeft,
                                 ),
@@ -621,7 +620,7 @@ class WelcomeFourScreen extends StatelessWidget {
                                   ),
                                 ),
                                 CustomImageView(
-                                  imagePath: ImageConstant.imgBottleOfWater,
+                                  imagePath: ImageConstant.imgBottle,
                                   height: 198.v,
                                   width: 58.h,
                                   alignment: Alignment.topLeft,
@@ -761,11 +760,7 @@ class WelcomeFourScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                                          )
-
-    
-
-
+                        )
                         ],
                       ),
                     ),
