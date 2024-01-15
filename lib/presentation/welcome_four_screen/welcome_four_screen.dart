@@ -19,11 +19,11 @@ class WelcomeFourScreen extends StatelessWidget {
         backgroundColor: theme.colorScheme.onPrimary.withOpacity(1),
         body: Container(
           width: double.maxFinite,
-          padding: EdgeInsets.only(top: 64.v),
+          padding: EdgeInsets.only(top: 70.v),
           child: Column(
             children: [
               SizedBox(
-                height: 564.v,
+                height: 500.v,
                 child: PageView(
                   controller: pageController,
                   scrollDirection: Axis.horizontal,
@@ -37,7 +37,7 @@ class WelcomeFourScreen extends StatelessWidget {
                       child: Column(
                         children: [
                           SizedBox(
-                            height: 278.v,
+                            height: 290.v,
                             width: 293.h,
                             child: Stack(
                               alignment: Alignment.bottomCenter,
@@ -378,16 +378,33 @@ class WelcomeFourScreen extends StatelessWidget {
                               ),
                             ),
                           ),
+                          SizedBox(height: 5.v),
+              SmoothPageIndicator(
+                controller: pageController,
+                count: 3,
+                axisDirection: Axis.horizontal,
+                effect: ScrollingDotsEffect(
+                  spacing: 6,
+                  activeDotColor: appTheme.deepPurpleA100,
+                  dotColor: appTheme.gray300,
+                  dotHeight: 12.v,
+                  dotWidth: 12.h,
+                ),
+                onDotClicked: (value) {
+                  pageController.jumpToPage(value);
+                },
+              ),
                         ],
                       ),
                     ),
+                    
                     
                      Container(
                       padding: EdgeInsets.symmetric(horizontal: 20.h),
                       child: Column(
                         children: [
                           CustomImageView(
-                            imagePath: ImageConstant.imgIllusrtarion2,
+                            imagePath: ImageConstant.imgIllusrtarion,
                             height: 291.v,
                             width: 326.h,
                           ),
@@ -414,362 +431,7 @@ class WelcomeFourScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.symmetric(horizontal: 20.h),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            height: 292.v,
-                            width: 318.h,
-                            child: Stack(
-                              alignment: Alignment.topRight,
-                              children: [
-                                Align(
-                                  alignment: Alignment.bottomCenter,
-                                  child: Container(
-                                    height: 162.v,
-                                    width: 318.h,
-                                    padding: EdgeInsets.symmetric(
-                                      horizontal: 16.h,
-                                      vertical: 13.v,
-                                    ),
-                                    decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                        image: fs.Svg(
-                                          ImageConstant.floor,
-                                        ),
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                    child: Stack(
-                                      alignment: Alignment.topRight,
-                                      children: [
-                                        CustomImageView(
-                                          imagePath: ImageConstant
-                                              .Shadows,
-                                          height: 103.v,
-                                          width: 274.h,
-                                          alignment: Alignment.bottomLeft,
-                                        ),
-                                        CustomImageView(
-                                          imagePath: ImageConstant
-                                              .Plants,
-                                          height: 50.v,
-                                          width: 24.h,
-                                          alignment: Alignment.topRight,
-                                          margin: EdgeInsets.only(
-                                            top: 35.v,
-                                            right: 3.h,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Align(
-                                  alignment: Alignment.topRight,
-                                  child: Padding(
-                                    padding: EdgeInsets.only(right: 100.h),
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        Container(
-                                          height: 94.v,
-                                          width: 24.h,
-                                          margin: EdgeInsets.only(top: 10.v),
-                                          child: Stack(
-                                            alignment: Alignment.centerLeft,
-                                            children: [
-                                              CustomImageView(
-                                                imagePath:
-                                                    ImageConstant.imgTelevision,
-                                                height: 35.v,
-                                                width: 20.h,
-                                                alignment: Alignment.topLeft,
-                                              ),
-                                              CustomImageView(
-                                                imagePath: ImageConstant
-                                                    .imgUserPrimarycontainer,
-                                                height: 35.v,
-                                                width: 20.h,
-                                                alignment: Alignment.centerLeft,
-                                              ),
-                                              CustomImageView(
-                                                imagePath: ImageConstant
-                                                    .imgUserPrimarycontainer35x20,
-                                                height: 35.v,
-                                                width: 20.h,
-                                                alignment: Alignment.bottomLeft,
-                                              ),
-                                              CustomImageView(
-                                                imagePath: ImageConstant
-                                                    .imgSettingsErrorcontainer,
-                                                height: 14.v,
-                                                width: 7.h,
-                                                alignment: Alignment.topRight,
-                                                margin:
-                                                    EdgeInsets.only(top: 12.v),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Container(
-                                          height: 94.v,
-                                          width: 25.h,
-                                          margin: EdgeInsets.only(
-                                            left: 4.h,
-                                            bottom: 10.v,
-                                          ),
-                                          child: Stack(
-                                            alignment: Alignment.centerLeft,
-                                            children: [
-                                              Align(
-                                                alignment: Alignment.topLeft,
-                                                child: SizedBox(
-                                                  height: 35.v,
-                                                  width: 20.h,
-                                                  child: Stack(
-                                                    alignment:
-                                                        Alignment.centerRight,
-                                                    children: [
-                                                      CustomImageView(
-                                                        imagePath: ImageConstant
-                                                            .imgUserPrimarycontainer35x19,
-                                                        height: 35.v,
-                                                        width: 19.h,
-                                                        alignment: Alignment
-                                                            .centerLeft,
-                                                      ),
-                                                      Align(
-                                                        alignment: Alignment
-                                                            .centerRight,
-                                                        child: SizedBox(
-                                                          height: 34.v,
-                                                          width: 19.h,
-                                                          child: Stack(
-                                                            alignment: Alignment
-                                                                .bottomRight,
-                                                            children: [
-                                                              CustomImageView(
-                                                                imagePath:
-                                                                    ImageConstant
-                                                                        .imgUserPurple300,
-                                                                height: 34.v,
-                                                                width: 19.h,
-                                                                alignment:
-                                                                    Alignment
-                                                                        .center,
-                                                              ),
-                                                              CustomImageView(
-                                                                imagePath:
-                                                                    ImageConstant
-                                                                        .imgMusic,
-                                                                height: 19.v,
-                                                                width: 12.h,
-                                                                alignment: Alignment
-                                                                    .bottomRight,
-                                                                margin:
-                                                                    EdgeInsets
-                                                                        .only(
-                                                                  right: 2.h,
-                                                                  bottom: 6.v,
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                              CustomImageView(
-                                                imagePath: ImageConstant
-                                                    .imgTelevisionPrimarycontainer,
-                                                height: 35.v,
-                                                width: 20.h,
-                                                alignment: Alignment.centerLeft,
-                                              ),
-                                              CustomImageView(
-                                                imagePath:
-                                                    ImageConstant.imgUser35x20,
-                                                height: 35.v,
-                                                width: 20.h,
-                                                alignment: Alignment.bottomLeft,
-                                              ),
-                                              CustomImageView(
-                                                imagePath: ImageConstant
-                                                    .imgSettingsErrorcontainer,
-                                                height: 14.v,
-                                                width: 7.h,
-                                                alignment:
-                                                    Alignment.centerRight,
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                CustomImageView(
-                                  imagePath: ImageConstant.imgBottle,
-                                  height: 198.v,
-                                  width: 58.h,
-                                  alignment: Alignment.topLeft,
-                                  margin: EdgeInsets.only(
-                                    left: 23.h,
-                                    top: 26.v,
-                                  ),
-                                ),
-                                Align(
-                                  alignment: Alignment.bottomLeft,
-                                  child: Container(
-                                    height: 221.v,
-                                    width: 170.h,
-                                    margin: EdgeInsets.only(
-                                      left: 56.h,
-                                      bottom: 27.v,
-                                    ),
-                                    child: Stack(
-                                      alignment: Alignment.bottomRight,
-                                      children: [
-                                        CustomImageView(
-                                          imagePath: ImageConstant
-                                              .imgSettingsOnprimary26x77,
-                                          height: 26.v,
-                                          width: 77.h,
-                                          alignment: Alignment.centerRight,
-                                          margin: EdgeInsets.only(right: 1.h),
-                                        ),
-                                        CustomImageView(
-                                          imagePath: ImageConstant
-                                              .imgThumbsUpPurple300,
-                                          height: 96.v,
-                                          width: 89.h,
-                                          alignment: Alignment.bottomRight,
-                                          margin: EdgeInsets.only(
-                                            right: 6.h,
-                                            bottom: 51.v,
-                                          ),
-                                        ),
-                                        CustomImageView(
-                                          imagePath: ImageConstant
-                                              .imgSettingsOnprimary48x78,
-                                          height: 48.v,
-                                          width: 78.h,
-                                          alignment: Alignment.bottomRight,
-                                          margin: EdgeInsets.only(bottom: 62.v),
-                                        ),
-                                        CustomImageView(
-                                          imagePath: ImageConstant.imgMobile,
-                                          height: 212.v,
-                                          width: 81.h,
-                                          alignment: Alignment.topLeft,
-                                          margin: EdgeInsets.only(left: 11.h),
-                                        ),
-                                        CustomImageView(
-                                          imagePath: ImageConstant
-                                              .imgContrastOnprimary,
-                                          height: 54.v,
-                                          width: 51.h,
-                                          alignment: Alignment.bottomLeft,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                CustomImageView(
-                                  imagePath:
-                                      ImageConstant.imgTelevisionPurple300,
-                                  height: 46.v,
-                                  width: 72.h,
-                                  alignment: Alignment.bottomCenter,
-                                  margin: EdgeInsets.only(bottom: 17.v),
-                                ),
-                                CustomImageView(
-                                  imagePath: ImageConstant.imgChartacter,
-                                  height: 206.v,
-                                  width: 82.h,
-                                  alignment: Alignment.centerRight,
-                                  margin: EdgeInsets.only(right: 32.h),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Align(
-                            alignment: Alignment.centerLeft,
-                            child: Padding(
-                              padding: EdgeInsets.only(
-                                left: 14.h,
-                                top: 43.v,
-                                right: 14.h,
-                              ),
-                              child: Text(
-                                "Begin Your Wellness",
-                                style: theme.textTheme.displaySmall,
-                              ),
-                            ),
-                          ),
-                          Align(
-                            alignment: Alignment.centerLeft,
-                            child: Container(
-                              width: 304.h,
-                              margin: EdgeInsets.only(right: 28.h),
-                              child: Text(
-                                "Determine your health goals. Don't skip these steps to help us provide you with personalized recommendations.",
-                                maxLines: 3,
-                                overflow: TextOverflow.ellipsis,
-                                style: CustomTextStyles.titleMediumBluegray400
-                                    .copyWith(
-                                  height: 1.63,
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(height: 20), // Add some space between the text and the button
-                                          Align(
-                        alignment: Alignment.center,
-                        child: Container(
-                          margin: EdgeInsets.symmetric(horizontal: 0),
-                          child: ElevatedButton(
-                            onPressed: () {
-                              // Add functionality for the Get Started button
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => SignUpScreen()),
-                              );
-                            },
-                            style: ElevatedButton.styleFrom(
-                              primary: Color.fromARGB(255, 41, 119, 184), // Set the button color
-                              onPrimary: Colors.white, // Set the text color
-                              padding: EdgeInsets.symmetric(horizontal: 150, vertical: 30), // Set width and height
-                            ),
-                            child: Text(
-                              "Get Started",
-                              style: TextStyle(
-                                fontSize: 10, // Set the text size suitable for the button
-                              ),
-                            ),
-                          ),
-                        ),
-                        )
-                        ],
-                      ),
-                    ),
-
-              
-                  ],
-                ),
-              ),
-              SizedBox(height: 5.v),
+                          SizedBox(height: 5.v),
               SmoothPageIndicator(
                 controller: pageController,
                 count: 3,
@@ -785,12 +447,136 @@ class WelcomeFourScreen extends StatelessWidget {
                   pageController.jumpToPage(value);
                 },
               ),
+                        ],
+                      ),
+                    ),
+                   
+
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: 20.h),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          
+                          Container(
+                      padding: EdgeInsets.symmetric(horizontal: 20.h),
+                      child: Column(
+                        children: [
+                          CustomImageView(
+                            imagePath: ImageConstant.imgIllusrtarion3,
+                            height: 291.v,
+                            width: 326.h,
+                          ),
+                           Padding(
+                            padding: EdgeInsets.only(
+                              top: 41.v,
+                              right: 6.h,
+                            ),
+                            child: Text(
+                              "Begin Your Wellness",
+                              style: theme.textTheme.displaySmall,
+                            ),
+                          ),
+                          Container(
+                            width: 328.h,
+                            margin: EdgeInsets.only(right: 6.h),
+                            child: Text(
+                              "Determine your health goals. Don't skip these steps to help us provide you with personalized recommendations.",
+                              maxLines: 3,
+                              overflow: TextOverflow.ellipsis,
+                              style: CustomTextStyles.titleMediumBluegray400
+                                  .copyWith(
+                                height: 1.63,
+                              ),
+                            ),
+                            
+                          ),
+                          SizedBox(height: 0), 
+                           Align(
+                        alignment: Alignment.center,
+                        child: Container(
+                          margin: EdgeInsets.symmetric(horizontal: 0),
+                          child: ElevatedButton(
+                            onPressed: () {
+                              // Add functionality for the Get Started button
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => SignUpScreen()),
+                              );
+                            },
+                            style: ElevatedButton.styleFrom(
+                              primary: Color.fromARGB(255, 41, 119, 184), // Set the button color
+                              onPrimary: Colors.white, // Set the text color
+                              padding: EdgeInsets.symmetric(horizontal: 150, vertical:30), // Set width and height
+                            ),
+                            child: Text(
+                              "Get Started",
+                              style: TextStyle(
+                                fontSize: 2, // Set the text size suitable for the button
+                              ),
+                            ),
+                          ),
+                        ),
+                        ),
+                         
+                        ],
+                        
+                      ),
+                      
+                    ),
+                        
+                                    
+                        ],
+                      ),
+                    ),
+                           
+              
+                  ],
+                  
+
+                  
+                ),
+              ),
+              // Align(
+              //           alignment: Alignment.center,
+              //           child: Container(
+              //             margin: EdgeInsets.symmetric(horizontal: 0),
+              //             child: ElevatedButton(
+              //               onPressed: () {
+              //                 // Add functionality for the Get Started button
+              //                 Navigator.push(
+              //                   context,
+              //                   MaterialPageRoute(builder: (context) => SignUpScreen()),
+              //                 );
+              //               },
+              //               style: ElevatedButton.styleFrom(
+              //                 primary: Color.fromARGB(255, 41, 119, 184), // Set the button color
+              //                 onPrimary: Colors.white, // Set the text color
+              //                 padding: EdgeInsets.symmetric(horizontal: 150, vertical: 30), // Set width and height
+              //               ),
+              //               child: Text(
+              //                 "Get Started",
+              //                 style: TextStyle(
+              //                   fontSize: 10, // Set the text size suitable for the button
+              //                 ),
+              //               ),
+              //             ),
+              //           ),
+              //           ),
+               
+
+
+
             ],
           ),
         ),
         bottomNavigationBar: _buildRowOne(context),
+        
       ),
-    );
+      
+     );
+    // SizedBox(height: 70), 
+     
   }
  
   /// Section Widget

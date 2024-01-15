@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
 
   TextEditingController passwordController = TextEditingController();
 
-  bool rememberMe = false;
+  bool rememberMe = true;
 
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -33,7 +33,7 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               children: [
                 _buildRowWithImageAndText(context),
-                SizedBox(height: 15.v),
+                SizedBox(height: 5.v),
                 Text(
                   "Welcome Back",
                   style: theme.textTheme.displaySmall,
@@ -88,38 +88,38 @@ class LoginScreen extends StatelessWidget {
                       right: 89.h,
                     ),
                     child: Row(
-                      children: [
-                        CustomIconButton(
-                          height: 40.adaptSize,
-                          width: 40.adaptSize,
-                          padding: EdgeInsets.all(8.h),
-                          child: CustomImageView(
-                            imagePath: ImageConstant.imgIcons,
-                          ),
-                        ),
-                        Spacer(
-                          flex: 50,
-                        ),
-                        CustomIconButton(
-                          height: 40.adaptSize,
-                          width: 40.adaptSize,
-                          padding: EdgeInsets.all(8.h),
-                          child: CustomImageView(
-                            imagePath: ImageConstant.imgIconsOnprimary,
-                          ),
-                        ),
-                        Spacer(
-                          flex: 50,
-                        ),
-                        CustomIconButton(
-                          height: 40.adaptSize,
-                          width: 40.adaptSize,
-                          padding: EdgeInsets.all(8.h),
-                          child: CustomImageView(
-                            imagePath: ImageConstant.imgIconsGray900,
-                          ),
-                        ),
-                      ],
+                     children: [
+          CustomIconButton(
+            height: 40.adaptSize,
+            width: 40.adaptSize,
+            padding: EdgeInsets.all(1.h),
+            child: CustomImageView(
+              imagePath: ImageConstant.imgIcon,
+            ),
+          ),
+          Spacer(
+            flex: 50,
+          ),
+          CustomIconButton(
+            height: 40.adaptSize,
+            width: 40.adaptSize,
+            padding: EdgeInsets.all(2.h),
+            child: CustomImageView(
+              imagePath: ImageConstant.imgIconOnPrimaryy,
+            ),
+          ),
+          Spacer(
+            flex: 50,
+          ),
+          CustomIconButton(
+            height: 40.adaptSize,
+            width: 40.adaptSize,
+            padding: EdgeInsets.all(5.h),
+            child: CustomImageView(
+              imagePath: ImageConstant.imgIconsGray900,
+            ),
+          ),
+        ],
                     ),
                   ),
                 ),
@@ -269,38 +269,32 @@ class LoginScreen extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: EdgeInsets.only(
-                top: 6.v,
-                bottom: 9.v,
-              ),
-              child: SizedBox(
-                width: 112.h,
-                child: Divider(
-                  color: appTheme.gray300,
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 12.h),
-              child: Text(
-                "or Login with",
-                style: CustomTextStyles.bodySmallBluegray400,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(
-                top: 6.v,
-                bottom: 9.v,
-              ),
-              child: SizedBox(
-                width: 125.h,
-                child: Divider(
-                  color: appTheme.gray300,
-                  indent: 13.h,
-                ),
-              ),
-            ),
+             Padding(
+    padding: EdgeInsets.only(
+      top: 1.v,
+      bottom: 5.v,
+    ),
+    child: Row(
+      children: [
+        Container(
+          width: 102.h,
+          height: 2, // Set the desired height for the line
+          color: appTheme.gray300, // Set the color to gray
+        ),
+        SizedBox(width: 12.h), // Add some spacing between the line and text
+        Text(
+          "or login with",
+          style: CustomTextStyles.bodySmallBluegray400,
+        ),
+        SizedBox(width: 12.h), // Add some spacing between the text and the next line
+        Container(
+          width: 112.h,
+          height: 2, // Set the desired height for the line
+          color: appTheme.gray300, // Set the color to gray
+        ),
+      ],
+    ),
+  ),
           ],
         ),
       ),

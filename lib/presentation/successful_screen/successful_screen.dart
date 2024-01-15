@@ -36,14 +36,15 @@ class SuccessfulScreen extends StatelessWidget {
                   left: 20.h,
                   right: 24.h,
                 ),
-                child: Text(
-                  "Great! Your profile has been successfully created. Now,we can help you achieve your health and fitness goals with personalized recommendations and content. Start exploring our app and get one step closer to a healthy lifestyle.\nIf you ever wish to update or modify your profile information, you can access it through the profile settings.",
-                  maxLines: 10,
-                  overflow: TextOverflow.ellipsis,
-                  style: CustomTextStyles.titleMediumBluegray600_1.copyWith(
-                    height: 1.63,
-                  ),
-                ),
+               child: Text(
+  "Great! Your profile has been successfully created. Now, we can help you achieve your health and fitness goals with personalized recommendations and content. Start exploring our app and get one step closer to a healthy lifestyle.\n\nIf you ever wish to update or modify your profile information, you can access it through the profile settings.",
+  maxLines: 10,
+  overflow: TextOverflow.ellipsis,
+  style: CustomTextStyles.titleMediumBluegray600_1.copyWith(
+    height: 1.40,
+  ),
+),
+
               ),
               SizedBox(height: 2.v),
             ],

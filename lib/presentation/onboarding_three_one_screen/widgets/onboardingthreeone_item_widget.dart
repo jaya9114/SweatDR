@@ -16,6 +16,19 @@ class OnboardingthreeoneItemWidget extends StatelessWidget {
         "Female",
         style: CustomTextStyles.titleSmallSecondaryContainer,
       ),
+      
+       
+    );
+  }
+   Widget _buildFrame2(BuildContext context) {
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: Text(
+        "male",
+        style: CustomTextStyles.titleSmallSecondaryContainer,
+      ),
+      
+       
     );
   }
 }

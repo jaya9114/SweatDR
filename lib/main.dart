@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           theme: theme,
           title: 'dr_app',
           debugShowCheckedModeBanner: false,
-          initialRoute: AppRoutes.welcomeFourScreen,
+          initialRoute: AppRoutes.splashScreen,
           routes: AppRoutes.routes,
         );
       },

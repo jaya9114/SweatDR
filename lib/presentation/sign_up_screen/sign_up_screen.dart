@@ -16,7 +16,7 @@ class SignUpScreen extends StatelessWidget {
 
   TextEditingController passwordController = TextEditingController();
 
-  bool acceptTermsAndConditionsCheckBox = false;
+  bool acceptTermsAndConditionsCheckBox =true;
 
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -32,7 +32,7 @@ class SignUpScreen extends StatelessWidget {
             child: Column(
               children: [
                 _buildLogo(context),
-                SizedBox(height: 14.v),
+                SizedBox(height: 10.v),
                 Text(
                   "Let’s Get Started",
                   style: theme.textTheme.displaySmall,
@@ -60,7 +60,7 @@ class SignUpScreen extends StatelessWidget {
                   text: "Create Account",
                   margin: EdgeInsets.symmetric(horizontal: 20.h),
                 ),
-                SizedBox(height: 9.v),
+                SizedBox(height: 4.v),
                 RichText(
                   text: TextSpan(
                     children: [
@@ -76,7 +76,7 @@ class SignUpScreen extends StatelessWidget {
                   ),
                   textAlign: TextAlign.left,
                 ),
-                SizedBox(height: 23.v),
+                SizedBox(height: 5.v),
                 _buildFrameThirteenRow(context),
                 SizedBox(height: 5.v),
               ],
@@ -94,7 +94,7 @@ class SignUpScreen extends StatelessWidget {
       width: double.maxFinite,
       padding: EdgeInsets.symmetric(
         horizontal: 75.h,
-        vertical: 88.v,
+        vertical: 80.v,
       ),
       decoration: AppDecoration.gradientDeepPurpleToGray,
       child: Row(
@@ -102,7 +102,7 @@ class SignUpScreen extends StatelessWidget {
         children: [
           CustomImageView(
             imagePath: ImageConstant.imgGroup,
-            height: 54.v,
+            height: 60.v,
             width: 60.h,
             margin: EdgeInsets.symmetric(vertical: 8.v),
           ),
@@ -211,40 +211,37 @@ class SignUpScreen extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: EdgeInsets.only(
-              top: 6.v,
-              bottom: 9.v,
-            ),
-            child: SizedBox(
-              width: 112.h,
-              child: Divider(
-                color: appTheme.gray300,
-              ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 12.h),
-            child: Text(
-              "or Sign Up with",
-              style: CustomTextStyles.bodySmallBluegray400,
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: 6.v,
-              bottom: 9.v,
-            ),
-            child: SizedBox(
-              width: 124.h,
-              child: Divider(
-                color: appTheme.gray300,
-                indent: 12.h,
-              ),
-            ),
-          ),
-        ],
+     children: [
+  Padding(
+    padding: EdgeInsets.only(
+      top: 6.v,
+      bottom: 5.v,
+    ),
+    child: Row(
+      children: [
+        Container(
+          width: 112.h,
+          height: 2, // Set the desired height for the line
+          color: appTheme.gray300, // Set the color to gray
+        ),
+        SizedBox(width: 12.h), // Add some spacing between the line and text
+        Text(
+          "or Sign Up with",
+          style: CustomTextStyles.bodySmallBluegray400,
+        ),
+        SizedBox(width: 12.h), // Add some spacing between the text and the next line
+        Container(
+          width: 112.h,
+          height: 2, // Set the desired height for the line
+          color: appTheme.gray300, // Set the color to gray
+        ),
+      ],
+    ),
+  ),
+],
+
+
+
       ),
     );
   }
@@ -263,9 +260,9 @@ class SignUpScreen extends StatelessWidget {
           CustomIconButton(
             height: 40.adaptSize,
             width: 40.adaptSize,
-            padding: EdgeInsets.all(8.h),
+            padding: EdgeInsets.all(1.h),
             child: CustomImageView(
-              imagePath: ImageConstant.imgIcons,
+              imagePath: ImageConstant.imgIcon,
             ),
           ),
           Spacer(
@@ -274,9 +271,9 @@ class SignUpScreen extends StatelessWidget {
           CustomIconButton(
             height: 40.adaptSize,
             width: 40.adaptSize,
-            padding: EdgeInsets.all(8.h),
+            padding: EdgeInsets.all(2.h),
             child: CustomImageView(
-              imagePath: ImageConstant.imgIconsOnprimary,
+              imagePath: ImageConstant.imgIconOnPrimaryy,
             ),
           ),
           Spacer(
@@ -285,7 +282,7 @@ class SignUpScreen extends StatelessWidget {
           CustomIconButton(
             height: 40.adaptSize,
             width: 40.adaptSize,
-            padding: EdgeInsets.all(8.h),
+            padding: EdgeInsets.all(5.h),
             child: CustomImageView(
               imagePath: ImageConstant.imgIconsGray900,
             ),

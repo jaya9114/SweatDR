@@ -4,7 +4,7 @@ import 'package:dr_app/widgets/custom_elevated_button.dart';
 import 'package:dr_app/widgets/custom_outlined_button.dart';
 import 'package:dr_app/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
-
+enum Gender { Female, Male }
 class OnboardingThreeOneScreen extends StatelessWidget {
   OnboardingThreeOneScreen({Key? key})
       : super(
@@ -18,7 +18,7 @@ class OnboardingThreeOneScreen extends StatelessWidget {
   TextEditingController kgController1 = TextEditingController();
 
   TextEditingController cmController = TextEditingController();
-
+String selectedGender = "female";
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -49,15 +49,51 @@ class OnboardingThreeOneScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 35.v),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "Gender",
-                  style: theme.textTheme.titleMedium,
-                ),
+              
+                Align(
+      alignment: Alignment.centerLeft,
+      child: Text(
+        "Gender",
+        style: theme.textTheme.titleMedium,
+      ),
+    ),
+    Flex(
+      direction: Axis.horizontal,
+      children: [
+        Expanded(
+          child: Row(
+            children: [
+              Radio(
+                value: "female",
+                groupValue: selectedGender,
+                onChanged: (value) {
+                  // Handle female radio button selection
+                  selectedGender = value as String;
+                },
               ),
+              Text("Female"),
+            ],
+          ),
+        ),
+        Expanded(
+          child: Row(
+            children: [
+              Radio(
+                value: "male",
+                groupValue: selectedGender,
+                onChanged: (value) {
+                  // Handle male radio button selection
+                  selectedGender = value as String;
+                },
+              ),
+              Text("Male"),
+            ],
+          ),
+        ),
+      ],
+    ),
               SizedBox(height: 6.v),
-              _buildOnboardingThreeOne(context),
+              // _buildOnboardingThreeOne(context),
               SizedBox(height: 25.v),
               _buildFrame1(context),
               SizedBox(height: 27.v),
@@ -68,13 +104,27 @@ class OnboardingThreeOneScreen extends StatelessWidget {
                   child: Row(
                     children: [
                       _buildFrame2(context),
-                      _buildFrame3(context),
+                       _buildFrame3(context),
                     ],
                   ),
                 ),
               ),
-              SizedBox(height: 27.v),
+              
+            Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: EdgeInsets.only(right: 58.h),
+                  child: Row(
+                    children: [
+               SizedBox(height: 25.v),
               _buildFrame4(context),
+                    
+                    ],
+                  ),
+                ),
+              ),
+               
+              
               SizedBox(height: 5.v),
             ],
           ),
@@ -101,7 +151,7 @@ class OnboardingThreeOneScreen extends StatelessWidget {
               height: 1.v,
             );
           },
-          itemCount: 3,
+          itemCount: 2,
           itemBuilder: (context, index) {
             return OnboardingthreeoneItemWidget();
           },
@@ -238,7 +288,7 @@ class OnboardingThreeOneScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildFrame4(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(right: 3.h),
+      padding: EdgeInsets.only(left: 10.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

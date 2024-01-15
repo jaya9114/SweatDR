@@ -20,8 +20,13 @@ class ImageConstant {
 static String Shadows1 = 'assets/images/Shadows1.png';
 static String Plants1 = 'assets/images/Plants1.png';
 static String HomeIndicator = 'assets/images/HomeIndicator.png';
-
+static String Character = 'assets/images/Character.png';
+static String imgIllusrtarion = 'assets/images/illusrtarion.png';
+static String imgIllusrtarion3 = 'assets/images/illustraiton3.png';
   static String imgFloor = '$imagePath/img_floor.svg';
+   static String imgIcon = 'assets/images/imgIcon.png';
+   static String imgIconOnPrimaryy = 'assets/images/imgIconOnPrimaryy.png';
+   static String imgIconGrayy900 = 'assets/images/imgIconGrayy900.png';
 
   static String imgShadows = '$imagePath/img_shadows.svg';
 

@@ -51,7 +51,7 @@ class OnboardingThreeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20.v),
+              SizedBox(height: 10.v),
               SizedBox(
                 height: 483.v,
                 width: 335.h,
@@ -59,6 +59,7 @@ class OnboardingThreeScreen extends StatelessWidget {
                   alignment: Alignment.bottomCenter,
                   children: [
                     _buildWorkoutOptions(context),
+                    
                     CustomElevatedButton(
                       width: 335.h,
                       text: "Next",
@@ -76,30 +77,81 @@ class OnboardingThreeScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildWorkoutOptions(BuildContext context) {
-    return Align(
-      alignment: Alignment.topCenter,
-      child: Padding(
-        padding: EdgeInsets.only(
-          left: 23.h,
-          right: 23.h,
-          bottom: 19.v,
-        ),
-        child: GridView.builder(
-          shrinkWrap: true,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            mainAxisExtent: 101.v,
-            crossAxisCount: 2,
-            mainAxisSpacing: 40.h,
-            crossAxisSpacing: 40.h,
+ Widget _buildWorkoutOptions(BuildContext context) {
+  List<Map<String, dynamic>> workoutData = [
+    {
+      'name': 'Lose Weight',
+    'style': CustomTextStyles.titleSmallInterDeeppurple500,
+    },
+    {
+      'name': 'Gain Weight',
+      'style': CustomTextStyles.titleSmallInterDeeppurple500,
+    },
+    {
+      'name': 'Get Fit',
+      'style': CustomTextStyles.titleSmallInterDeeppurple500,
+    },
+    {
+      'name': 'Maintain Health',
+      'style': CustomTextStyles.titleSmallInterDeeppurple500,
+    },
+    {
+      'name': 'Stress Reduction',
+      'style': CustomTextStyles.titleSmallInterDeeppurple500,
+    },
+    {
+      'name': 'Diet Plan',
+      'style': CustomTextStyles.titleSmallInterDeeppurple500,
+    },
+    {
+      'name': 'Nutritional Guidance',
+      'style': CustomTextStyles.titleSmallInterDeeppurple500,
+    },
+    {
+      'name': 'Meal Planning',
+      'style': CustomTextStyles.titleSmallInterDeeppurple500,
+    },
+    // Add more workout data with different names and styles
+  ];
+
+  return Align(
+    alignment: Alignment.topCenter,
+    child: GridView.builder(
+      shrinkWrap: true,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        mainAxisSpacing: 2.h,
+        crossAxisSpacing: 10.h,
+        childAspectRatio: 1.5, // Ensure square boxes by setting the aspect ratio to 1
+      ),
+      physics: NeverScrollableScrollPhysics(),
+      itemCount: workoutData.length,
+      itemBuilder: (context, index) {
+       return Container(
+  height: 50.v, // Set a fixed height for each container
+  child: Row(
+    children: [
+      Expanded(
+        child: Padding(
+          padding: EdgeInsets.all(8.0), // Set your desired padding value
+          child: Container(
+            // The width here includes the padding
+            width: 30.h - 10.0, // Adjust width to account for padding
+            child: WorkoutoptionsItemWidget(
+              text: workoutData[index]['name'],
+              textStyle: workoutData[index]['style'],
+            ),
           ),
-          physics: NeverScrollableScrollPhysics(),
-          itemCount: 8,
-          itemBuilder: (context, index) {
-            return WorkoutoptionsItemWidget();
-          },
         ),
       ),
-    );
-  }
+    ],
+  ),
+);
+
+
+      },
+    ),
+  );
+
+}
 }
