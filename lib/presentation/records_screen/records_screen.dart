@@ -67,7 +67,7 @@ class RecordsScreen extends StatelessWidget {
                         leftIcon: Container(
                             margin: EdgeInsets.only(right: 8.h),
                             child: CustomImageView(
-                                imagePath: ImageConstant.imgButtonVariant4,
+                                imagePath: ImageConstant.Variant4,
                                 height: 20.adaptSize,
                                 width: 20.adaptSize)),
                         buttonStyle: CustomButtonStyles.outlineBlueGrayTL41,

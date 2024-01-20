@@ -88,6 +88,7 @@ class ProfileHealthGoalsScreen extends StatelessWidget {
     return CustomTextFormField(
       controller: weightGoalController,
       hintText: "Lose Weight",
+      hintStyle: CustomTextStyles.titleSmallBluegray600,
     );
   }
 

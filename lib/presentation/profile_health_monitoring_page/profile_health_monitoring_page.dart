@@ -43,13 +43,41 @@ class ProfileHealthMonitoringPage extends StatelessWidget {
               ),
               SizedBox(height: 12.v),
               _buildProfileHealthMonitoring(context),
+              SizedBox(height: 20.v),
+               _buildBottomImg(context),
+
             ],
           ),
         ),
       ),
     );
   }
-
+Widget _buildBottomImg(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(8.0),
+      // Set the background color as needed
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Image.asset(
+            'assets/images/Records.png', // Replace with your image path
+            width: 80.0,
+            height: 80.0,
+          ),
+          Image.asset(
+            'assets/images/progress.png', // Replace with your image path
+            width: 80.0,
+            height: 80.0,
+          ),
+          Image.asset(
+            'assets/images/profile.png', // Replace with your image path
+            width: 80.0,
+            height: 80.0,
+          ),
+        ],
+      ),
+    );
+  }
   /// Section Widget
   PreferredSizeWidget _buildAppBar(BuildContext context) {
     return CustomAppBar(
@@ -91,4 +119,5 @@ class ProfileHealthMonitoringPage extends StatelessWidget {
       ),
     );
   }
+  
 }

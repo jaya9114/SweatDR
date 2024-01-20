@@ -1,4 +1,5 @@
 import 'package:dr_app/core/app_export.dart';
+import 'package:dr_app/presentation/profile_page/profile_page.dart';
 import 'package:dr_app/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 
@@ -58,6 +59,13 @@ class SuccessfulScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildContinueButton(BuildContext context) {
     return CustomElevatedButton(
+       onPressed: () {
+            // Add functionality for the button
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ProfilePage()),
+            );
+          },
       text: "Continue",
       margin: EdgeInsets.only(
         left: 19.h,

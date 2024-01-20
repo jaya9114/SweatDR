@@ -35,10 +35,10 @@ class RecordsWeightNewEntryDefaultScreen extends StatelessWidget {
           child: Column(
             children: [
               _buildGoalWeightRow(context),
-              SizedBox(height: 28.v),
+              SizedBox(height: 35.v),
               _buildFrame(context),
-              SizedBox(height: 20.v),
-              _buildAddNoteColumn(context),
+              SizedBox(height: 25.v),
+              _buildAddNote(context),
               SizedBox(height: 5.v),
             ],
           ),
@@ -205,28 +205,41 @@ class RecordsWeightNewEntryDefaultScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildAddNoteColumn(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          "Add note",
-          style: CustomTextStyles.titleSmallOnPrimaryContainerMedium,
-        ),
-        SizedBox(height: 5.v),
-        CustomTextFormField(
-          controller: suggestedController,
-          hintText: "Suggested",
-          textInputAction: TextInputAction.done,
-          maxLines: 6,
-          contentPadding: EdgeInsets.symmetric(
-            horizontal: 12.h,
-            vertical: 13.v,
+   Widget _buildAddNote(BuildContext context) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        "Add note",
+        style: CustomTextStyles.titleSmallOnPrimaryContainerMedium,
+      ),
+      SizedBox(height: 5.v),
+      Row(
+        children: [
+          Expanded(
+            child: CustomTextFormField(
+            
+              hintText: "Suggested",
+              textInputAction: TextInputAction.done,
+              maxLines: 3,
+              contentPadding: EdgeInsets.symmetric(
+                horizontal: 12.h,
+                vertical: 13.v,
+              ),
+            ),
           ),
-        ),
-      ],
-    );
-  }
+          SizedBox(width: 5.v), // Adjust the spacing as needed
+          Text(
+            "0/250",
+            style: TextStyle(
+              // Set your additional text style here
+            ),
+          ),
+        ],
+      ),
+    ],
+  );
+}
 
   /// Section Widget
   Widget _buildButtonsRow(BuildContext context) {

@@ -63,9 +63,13 @@ class RecordsExerciseNewEntryDefaultScreen extends StatelessWidget {
                         SizedBox(height: 20.v),
                         _buildAddNote(context),
                         SizedBox(height: 28.v),
+                        
+                        
                         _buildFrame(context),
-                        SizedBox(height: 11.v),
+                         SizedBox(height: 30.v),
+                        
                         _buildConnectOtherApps(context),
+                        SizedBox(height: 60.v),
                       ],
                     ),
                   ),
@@ -74,6 +78,7 @@ class RecordsExerciseNewEntryDefaultScreen extends StatelessWidget {
             ],
           ),
         ),
+        
         bottomNavigationBar: _buildButtons(context),
       ),
     );
@@ -249,77 +254,104 @@ class RecordsExerciseNewEntryDefaultScreen extends StatelessWidget {
   }
 
   /// Section Widget
-  Widget _buildAddNote(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          "Add note",
-          style: CustomTextStyles.titleSmallOnPrimaryContainerMedium,
-        ),
-        SizedBox(height: 5.v),
-        CustomTextFormField(
-          controller: suggestedvalueController,
-          hintText: "Suggested",
-          textInputAction: TextInputAction.done,
-          maxLines: 6,
-          contentPadding: EdgeInsets.symmetric(
-            horizontal: 12.h,
-            vertical: 13.v,
+   Widget _buildAddNote(BuildContext context) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        "Add note",
+        style: CustomTextStyles.titleSmallOnPrimaryContainerMedium,
+      ),
+      SizedBox(height: 5.v),
+      Row(
+        children: [
+          Expanded(
+            child: CustomTextFormField(
+            
+              hintText: "Suggested",
+              textInputAction: TextInputAction.done,
+              maxLines: 4,
+              contentPadding: EdgeInsets.symmetric(
+                horizontal: 12.h,
+                vertical: 13.v,
+              ),
+            ),
           ),
-        ),
-      ],
-    );
-  }
+          SizedBox(width: 5.v), // Adjust the spacing as needed
+          Text(
+            "0/250",
+            style: TextStyle(
+              // Set your additional text style here
+            ),
+          ),
+        ],
+      ),
+    ],
+  );
+}
 
   /// Section Widget
   Widget _buildFrame(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20.h),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+     children: [
+  Padding(
+    padding: EdgeInsets.only(
+      top: 6.v,
+      bottom: 5.v,
+    ),
+    child: Row(
       children: [
-        Padding(
-          padding: EdgeInsets.symmetric(vertical: 8.v),
-          child: SizedBox(
-            width: 102.h,
-            child: Divider(
-              color: appTheme.gray300,
-            ),
-          ),
+        Container(
+          width: 90.h,
+          height: 2, // Set the desired height for the line
+          color: appTheme.gray300, // Set the color to gray
         ),
+        SizedBox(width: 12.h), // Add some spacing between the line and text
         Text(
           "or connect with",
-          style: CustomTextStyles.labelLargeBluegray400,
+          style: CustomTextStyles.bodySmallBluegray400,
         ),
-        Padding(
-          padding: EdgeInsets.symmetric(vertical: 8.v),
-          child: SizedBox(
-            width: 102.h,
-            child: Divider(
-              color: appTheme.gray300,
-            ),
-          ),
+        SizedBox(width: 12.h), // Add some spacing between the text and the next line
+        Container(
+          width: 90.h,
+          height: 2, // Set the desired height for the line
+          color: appTheme.gray300, // Set the color to gray
         ),
       ],
+    ),
+  ),
+],
+
+
+
+      ),
     );
   }
 
   /// Section Widget
   Widget _buildFitbit(BuildContext context) {
-    return CustomElevatedButton(
-      height: 40.v,
-      text: "Fitbit",
-      leftIcon: Container(
-        margin: EdgeInsets.only(right: 6.h),
-        child: CustomImageView(
-          imagePath: ImageConstant.imgVscodeIconsFileTypeFitbit,
-          height: 24.adaptSize,
-          width: 24.adaptSize,
-        ),
+  return CustomElevatedButton(
+    height: 60.v,
+    text: "Fitbit",
+    leftIcon: Container(
+      margin: EdgeInsets.only(right: 6.h),
+      child: CustomImageView(
+        imagePath: ImageConstant.imgVscodeIconsFileTypeFitbit,
+        height: 24.adaptSize,
+        width: 24.adaptSize,
       ),
-      buttonStyle: CustomButtonStyles.fillOnPrimary,
-      buttonTextStyle: theme.textTheme.titleMedium!,
-    );
-  }
+    ),
+    buttonStyle: CustomButtonStyles.fillOnPrimary.copyWith(
+      backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(255, 251, 251, 0.945)),
+    ),
+    buttonTextStyle: theme.textTheme.titleMedium!,
+  );
+}
+
 
   /// Section Widget
   Widget _buildGlucoseMonitor(BuildContext context) {
@@ -334,9 +366,11 @@ class RecordsExerciseNewEntryDefaultScreen extends StatelessWidget {
           width: 24.adaptSize,
         ),
       ),
-      buttonStyle: CustomButtonStyles.fillOnPrimary,
-      buttonTextStyle: theme.textTheme.titleMedium!,
-    );
+     buttonStyle: CustomButtonStyles.fillOnPrimary.copyWith(
+      backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(255, 251, 251, 0.945)),
+    ),
+    buttonTextStyle: theme.textTheme.titleMedium!,
+  );
   }
 
   /// Section Widget
@@ -348,13 +382,15 @@ class RecordsExerciseNewEntryDefaultScreen extends StatelessWidget {
         margin: EdgeInsets.only(right: 6.h),
         child: CustomImageView(
           imagePath: ImageConstant.imgFluentEmojiFl,
-          height: 24.adaptSize,
-          width: 24.adaptSize,
+          height: 39.adaptSize,
+          width: 27.adaptSize,
         ),
       ),
-      buttonStyle: CustomButtonStyles.fillOnPrimary,
-      buttonTextStyle: theme.textTheme.titleMedium!,
-    );
+      buttonStyle: CustomButtonStyles.fillOnPrimary.copyWith(
+      backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(255, 251, 251, 0.945)),
+    ),
+    buttonTextStyle: theme.textTheme.titleMedium!,
+  );
   }
 
   /// Section Widget

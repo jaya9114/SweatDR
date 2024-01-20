@@ -1,3 +1,5 @@
+import 'package:dr_app/presentation/onboarding_three_screen/onboarding_three_screen.dart';
+
 import '../onboarding_three_one_screen/widgets/onboardingthreeone_item_widget.dart';
 import 'package:dr_app/core/app_export.dart';
 import 'package:dr_app/widgets/custom_elevated_button.dart';
@@ -312,12 +314,19 @@ String selectedGender = "female";
   /// Section Widget
   Widget _buildNext(BuildContext context) {
     return CustomElevatedButton(
-      text: "Next",
-      margin: EdgeInsets.only(
+                   onPressed: () {
+            // Add functionality for the button
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => OnboardingThreeScreen()),
+            );
+          },
+                  text: "Next",
+                  margin: EdgeInsets.only(
         left: 20.h,
         right: 20.h,
         bottom: 66.v,
       ),
-    );
+                );
   }
 }

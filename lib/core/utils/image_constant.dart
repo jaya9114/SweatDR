@@ -27,6 +27,9 @@ static String imgIllusrtarion3 = 'assets/images/illustraiton3.png';
    static String imgIcon = 'assets/images/imgIcon.png';
    static String imgIconOnPrimaryy = 'assets/images/imgIconOnPrimaryy.png';
    static String imgIconGrayy900 = 'assets/images/imgIconGrayy900.png';
+     static String imgIllustration= 'assets/images/ProfileConnect.png';
+          static String Variant4= 'assets/images/Variant4.png';
+          static String Record1= 'assets/images/record1.png';
 
   static String imgShadows = '$imagePath/img_shadows.svg';
 
@@ -134,13 +137,13 @@ static String imgIllusrtarion3 = 'assets/images/illustraiton3.png';
   // Profile images
   static String imgEllipse2 = '$imagePath/img_ellipse_2.png';
 
-  static String imgArrowRight = '$imagePath/img_arrow_right.svg';
+  static String imgArrow = 'assets/images/imgArrow.png';
 
   static String imgIconNavbarBlue800 =
       '$imagePath/img_icon_navbar_blue_800.svg';
 
   // Profile/Health Monitoring-connect images
-  static String imgIllustration = '$imagePath/img_illustration.svg';
+  // static String imgIllustration = '$imagePath/img_illustration.svg';
 
   static String imgClock = '$imagePath/img_clock.svg';
 
@@ -224,14 +227,14 @@ static String imgIllusrtarion3 = 'assets/images/illustraiton3.png';
   static String imgRewind = '$imagePath/img_rewind.svg';
 
   static String imgVscodeIconsFileTypeFitbit =
-      '$imagePath/img_vscode_icons_file_type_fitbit.svg';
+      'assets/images/fitbit.png';
 
   static String imgEpSelect = '$imagePath/img_ep_select.svg';
 
   static String imgMaterialSymbolsGlucose =
-      '$imagePath/img_material_symbols_glucose.svg';
+      'assets/images/glucose.png';
 
-  static String imgFluentEmojiFl = '$imagePath/img_fluent_emoji_fl.svg';
+  static String imgFluentEmojiFl = 'assets/images/blood.png';
 
   static String imgIconNavbarBlueGray20024x24 =
       '$imagePath/img_icon_navbar_blue_gray_200_24x24.svg';

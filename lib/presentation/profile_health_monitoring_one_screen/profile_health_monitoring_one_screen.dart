@@ -40,7 +40,7 @@ class ProfileHealthMonitoringOneScreen extends StatelessWidget {
                 "Health Tracking Integration",
                 style: CustomTextStyles.titleMediumSecondaryContainer,
               ),
-              SizedBox(height: 16.v),
+              SizedBox(height: 26.v),
               _buildProfileHealthMonitoring(context),
               SizedBox(height: 5.v),
             ],

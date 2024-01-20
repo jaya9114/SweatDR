@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:dr_app/presentation/splash_screen/splash_screen.dart';
 import 'package:dr_app/presentation/welcome_four_screen/welcome_four_screen.dart';
@@ -6,6 +7,9 @@ import 'package:dr_app/presentation/login_screen/login_screen.dart';
 import 'package:dr_app/presentation/onboarding_three_one_screen/onboarding_three_one_screen.dart';
 import 'package:dr_app/presentation/onboarding_three_screen/onboarding_three_screen.dart';
 import 'package:dr_app/presentation/successful_screen/successful_screen.dart';
+import 'package:dr_app/presentation/profile_page/profile_page.dart';
+import 'package:dr_app/presentation/profile_health_monitoring_page/profile_health_monitoring_page.dart';
+
 import 'package:dr_app/presentation/profile_health_monitoring_container_screen/profile_health_monitoring_container_screen.dart';
 import 'package:dr_app/presentation/profile_health_monitoring_connect_screen/profile_health_monitoring_connect_screen.dart';
 import 'package:dr_app/presentation/profile_health_monitoring_one_screen/profile_health_monitoring_one_screen.dart';
@@ -17,7 +21,13 @@ import 'package:dr_app/presentation/records_food_new_entry_default_screen/record
 import 'package:dr_app/presentation/records_exercise_new_entry_default_screen/records_exercise_new_entry_default_screen.dart';
 import 'package:dr_app/presentation/records_glucose_creatine_new_entry_default_screen/records_glucose_creatine_new_entry_default_screen.dart';
 import 'package:dr_app/presentation/records_weight_new_entry_default_screen/records_weight_new_entry_default_screen.dart';
+import 'package:dr_app/presentation/progress_hourly_page/progress_hourly_page.dart';
+import 'package:dr_app/presentation/progress_daily_page/progress_daily_page.dart';
+import 'package:dr_app/presentation/progress_weekly_page/progress_weekly_page.dart';
+import 'package:dr_app/presentation/progress_monthly_page/progress_monthly_page.dart';
+import 'package:dr_app/presentation/progress_yearly_page/progress_yearly_page.dart';
 import 'package:dr_app/presentation/app_navigation_screen/app_navigation_screen.dart';
+
 
 class AppRoutes {
   static const String splashScreen = '/splash_screen';
@@ -91,6 +101,8 @@ class AppRoutes {
     onboardingThreeOneScreen: (context) => OnboardingThreeOneScreen(),
     onboardingThreeScreen: (context) => OnboardingThreeScreen(),
     successfulScreen: (context) => SuccessfulScreen(),
+    profilePage: (context) => ProfilePage(),
+    profileHealthMonitoringPage: (context) => ProfileHealthMonitoringPage(),
     profileHealthMonitoringContainerScreen: (context) =>
         ProfileHealthMonitoringContainerScreen(),
     profileHealthMonitoringConnectScreen: (context) =>
@@ -109,6 +121,11 @@ class AppRoutes {
         RecordsGlucoseCreatineNewEntryDefaultScreen(),
     recordsWeightNewEntryDefaultScreen: (context) =>
         RecordsWeightNewEntryDefaultScreen(),
+        progressHourlyPage: (context) =>ProgressHourlyPage(),
+        progressDailyPage: (context) =>ProgressDailyPage(),
+        progressWeeklyPage: (context) =>ProgressWeeklyPage(),
+        progressMonthlyPage: (context) =>ProgressMonthlyPage(),
+        progressYearlyPage: (context) =>ProgressYearlyPage(),
     appNavigationScreen: (context) => AppNavigationScreen()
   };
 }

@@ -1,3 +1,5 @@
+import 'package:dr_app/presentation/successful_screen/successful_screen.dart';
+
 import '../onboarding_three_screen/widgets/workoutoptions_item_widget.dart';
 import 'package:dr_app/core/app_export.dart';
 import 'package:dr_app/widgets/custom_elevated_button.dart';
@@ -61,6 +63,13 @@ class OnboardingThreeScreen extends StatelessWidget {
                     _buildWorkoutOptions(context),
                     
                     CustomElevatedButton(
+                       onPressed: () {
+            // Add functionality for the button
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SuccessfulScreen()),
+            );
+          },
                       width: 335.h,
                       text: "Next",
                       alignment: Alignment.bottomCenter,

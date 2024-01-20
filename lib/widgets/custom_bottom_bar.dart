@@ -1,5 +1,6 @@
 import 'package:dr_app/core/app_export.dart';
 import 'package:flutter/material.dart';
+import 'package:dr_app/core/utils/image_constant.dart';
 
 class CustomBottomBar extends StatefulWidget {
   CustomBottomBar({this.onChanged});
@@ -15,8 +16,8 @@ class CustomBottomBarState extends State<CustomBottomBar> {
 
   List<BottomMenuModel> bottomMenuList = [
     BottomMenuModel(
-      icon: ImageConstant.imgIconNavbar,
-      activeIcon: ImageConstant.imgIconNavbar,
+      icon: ImageConstant.Record1,
+      activeIcon: ImageConstant.Record1,
       title: "Records",
       type: BottomBarEnum.Records,
     ),
@@ -37,7 +38,7 @@ class CustomBottomBarState extends State<CustomBottomBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 62.v,
+      height: 112.v,
       decoration: BoxDecoration(
         color: appTheme.gray50,
       ),

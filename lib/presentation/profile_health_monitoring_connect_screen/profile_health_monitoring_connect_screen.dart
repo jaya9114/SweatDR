@@ -81,7 +81,7 @@ class ProfileHealthMonitoringConnectScreen extends StatelessWidget {
   /// Section Widget
   PreferredSizeWidget _buildAppBar(BuildContext context) {
     return CustomAppBar(
-      height: 27.v,
+      height: 37.v,
       title: AppbarSubtitleTwo(
         text: "Cancel",
         margin: EdgeInsets.only(left: 20.h),

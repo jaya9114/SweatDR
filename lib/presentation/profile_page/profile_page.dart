@@ -65,6 +65,8 @@ class ProfilePage extends StatelessWidget {
                 text: "Privacy Policy",
               ),
               SizedBox(height: 5.v),
+               SizedBox(height: 18.v),
+              _buildBottomImg(context),
             ],
           ),
         ),
@@ -129,7 +131,7 @@ class ProfilePage extends StatelessWidget {
                     imagePath: ImageConstant.imgArrowDown,
                     height: 24.adaptSize,
                     width: 24.adaptSize,
-                    margin: EdgeInsets.only(top: 3.v),
+                    margin: EdgeInsets.only(top: 10.v),
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 16.h),
@@ -177,7 +179,7 @@ class ProfilePage extends StatelessWidget {
             ),
           ),
           CustomImageView(
-            imagePath: ImageConstant.imgArrowRight,
+            imagePath: ImageConstant.imgArrow,
             height: 20.adaptSize,
             width: 20.adaptSize,
             margin: EdgeInsets.only(
@@ -211,7 +213,7 @@ class ProfilePage extends StatelessWidget {
             ),
           ),
           CustomImageView(
-            imagePath: ImageConstant.imgArrowRight,
+            imagePath: ImageConstant.imgArrow,
             height: 20.adaptSize,
             width: 20.adaptSize,
             margin: EdgeInsets.only(right: 5.h),
@@ -220,4 +222,31 @@ class ProfilePage extends StatelessWidget {
       ),
     );
   }
+ Widget _buildBottomImg(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(8.0),
+      // Set the background color as needed
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Image.asset(
+            'assets/images/Records.png', // Replace with your image path
+            width: 80.0,
+            height: 80.0,
+          ),
+          Image.asset(
+            'assets/images/progress.png', // Replace with your image path
+            width: 80.0,
+            height: 80.0,
+          ),
+          Image.asset(
+            'assets/images/profile.png', // Replace with your image path
+            width: 80.0,
+            height: 80.0,
+          ),
+        ],
+      ),
+    );
+  }
+
 }
