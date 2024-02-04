@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           theme: theme,
           title: 'dr_app',
           debugShowCheckedModeBanner: false,
-          initialRoute: AppRoutes.progressWeeklyPage,
+          initialRoute: AppRoutes.progressHourlyPage,
           routes: AppRoutes.routes,
         );
       },
