@@ -23,41 +23,49 @@ class ProgressHourlyPageState extends State<ProgressHourlyPage>
 Widget build(BuildContext context) {
   return SafeArea(
     child: Scaffold(
-      appBar: AppBar(
-        title: Text("Progress"),
-      ),
+     appBar: AppBar(
+    leading: CustomImageView(
+      imagePath: ImageConstant.imgArrowDown,
+      height: 24.adaptSize,
+      width: 24.adaptSize,
+      margin: EdgeInsets.all(10.h), // Adjust margin as needed
+    ),
+    title: Text("Progress"),
+  ),
       body: SizedBox(
         width: SizeUtils.width,
         child: SingleChildScrollView(
           child: Column(
             children: [
               SizedBox(height: 20.v),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.h),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // New Titles
-                    Text(
-                      "Daily",
-                      // style: CustomTextStyles.titleMediumOnPrimary,
-                    ),
-                    SizedBox(height: 10.v),
-                    Text(
-                      "Weekly",
-                      // style: CustomTextStyles.titleMediumOnPrimary,
-                    ),
-                    SizedBox(height: 10.v),
-                    Text(
-                      "Monthly",
-                      // style: CustomTextStyles.titleMediumOnPrimary,
-                    ),
-                    SizedBox(height: 10.v),
-                    Text(
-                      "Yearly",
-                      // style: CustomTextStyles.titleMediumOnPrimary,
-                    ),
-                    SizedBox(height: 20.v),
+           Padding(
+  padding: EdgeInsets.symmetric(horizontal: 20.h),
+  child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      // New Titles
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            "Hourly",
+            style: CustomTextStyles.bodyMediumAliceDeeppurple300,
+          ),
+          Text(
+            "Daily",
+            // style: CustomTextStyles.titleMediumOnPrimary,
+          ),
+          Text(
+            "Weakly",
+            // style: CustomTextStyles.titleMediumOnPrimary,
+          ),
+          Text(
+            "Monthly",
+            // style: CustomTextStyles.titleMediumOnPrimary,
+          ),
+        ],
+      ),
+      SizedBox(height: 20.v),
                     
                     // Rest of the existing code
                     Container(

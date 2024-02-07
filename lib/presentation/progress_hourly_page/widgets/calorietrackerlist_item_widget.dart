@@ -10,6 +10,7 @@ class CalorietrackerlistItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: 15.h,
@@ -93,15 +94,15 @@ class CalorietrackerlistItemWidget extends StatelessWidget {
                                 "750",
                                 style: theme.textTheme.titleSmall,
                               ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsets.only(top: 18.v),
-                                  child: Divider(
-                                    color: appTheme.teal50,
-                                    indent: 14.h,
-                                  ),
-                                ),
-                              ),
+                              // Expanded(
+                              //   child: Padding(
+                              //     padding: EdgeInsets.only(top: 18.v),
+                              //     child: Divider(
+                              //       color: appTheme.teal50,
+                              //       indent: 14.h,
+                              //     ),
+                              //   ),
+                              // ),
                             ],
                           ),
                         ),
@@ -129,41 +130,38 @@ class CalorietrackerlistItemWidget extends StatelessWidget {
                               Expanded(
                                 child: Padding(
                                   padding: EdgeInsets.only(bottom: 18.v),
-                                  child: Divider(
-                                    color: appTheme.blueGray50,
-                                    indent: 14.h,
-                                  ),
+                                  // child: Divider(
+                                  //   color: appTheme.blueGray50,
+                                  //   indent: 14.h,
+                                  // ),
                                 ),
                               ),
                             ],
                           ),
                         ),
                         SizedBox(height: 14.v),
-                        Align(
-                          alignment: Alignment.centerRight,
-                          child: Padding(
-                            padding: EdgeInsets.only(left: 24.h),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Text(
-                                  "0",
-                                  style: theme.textTheme.titleSmall,
+                         Padding(
+                          padding: EdgeInsets.only(
+                            left: 8.h,
+                            right: 5.h,
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "0",
+                                style: theme.textTheme.titleSmall,
+                              ),
+                              Expanded(
+                                child: Padding(
+                                  padding: EdgeInsets.only(bottom: 18.v),
+                                  // child: Divider(
+                                  //   color: appTheme.blueGray50,
+                                  //   indent: 14.h,
+                                  // ),
                                 ),
-                                Expanded(
-                                  child: Padding(
-                                    padding: EdgeInsets.only(
-                                      top: 12.v,
-                                      bottom: 6.v,
-                                    ),
-                                    child: Divider(
-                                      color: appTheme.gray300,
-                                      indent: 8.h,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
