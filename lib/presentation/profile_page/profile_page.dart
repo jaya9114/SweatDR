@@ -37,7 +37,7 @@ class ProfilePage extends StatelessWidget {
               _buildDateOfBirth(
                 context,
                 dateOfBirth: "Weight",
-                dec: "64", 
+                dec: "65", 
               ),
               _buildDateOfBirth(
                 context,
